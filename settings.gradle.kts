@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Chepuha"
 include(":app")
+include(":domain")
