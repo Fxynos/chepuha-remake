@@ -16,6 +16,6 @@ interface FlowUseCase<T, R>: UseCase {
     operator fun invoke(param: T): Flow<R>
 }
 
-operator fun <R> BlockingUseCase<Unit, R>.invoke() = invoke(Unit)
-suspend operator fun <R> SuspendedUseCase<Unit, R>.invoke() = invoke(Unit)
-operator fun <R> FlowUseCase<Unit, R>.invoke() = invoke(Unit)
+operator fun BlockingUseCase<Unit, *>.invoke() = invoke(Unit)
+suspend operator fun SuspendedUseCase<Unit, *>.invoke() = invoke(Unit)
+operator fun FlowUseCase<Unit, *>.invoke() = invoke(Unit)
