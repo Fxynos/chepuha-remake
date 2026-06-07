@@ -1,4 +1,4 @@
-package com.fxynos.chepuha.domain.boundary
+package com.fxynos.chepuha.domain.gateway
 
 import com.fxynos.chepuha.domain.model.Story
 

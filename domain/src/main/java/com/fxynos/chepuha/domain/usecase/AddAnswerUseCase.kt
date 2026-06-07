@@ -1,7 +1,7 @@
 package com.fxynos.chepuha.domain.usecase
 
-import com.fxynos.chepuha.domain.boundary.PlayerDataSource
-import com.fxynos.chepuha.domain.boundary.QuestionDataSource
+import com.fxynos.chepuha.domain.gateway.PlayerDataSource
+import com.fxynos.chepuha.domain.gateway.QuestionDataSource
 import com.fxynos.chepuha.domain.contract.SuspendedUseCase
 import com.fxynos.chepuha.domain.model.PlayerAnswer
 import com.fxynos.chepuha.domain.model.StoryTellingDataSource
