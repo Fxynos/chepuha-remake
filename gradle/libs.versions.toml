@@ -10,11 +10,12 @@ compileSdk = "36"
 targetJvm = "17"
 
 # versions
-agp = "8.5.2"
+agp = "9.0.0"
 kotlin = "2.0.0"
 coreKtx = "1.16.0"
 appcompat = "1.7.1"
 material = "1.12.0"
+hilt = "2.60"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -22,9 +23,13 @@ androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
 hilt-javax = { group = "javax.inject", name = "javax.inject", version = "1" }
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" } # ksp
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+
+ksp = { id = "com.google.devtools.ksp", version = "2.3.6" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 

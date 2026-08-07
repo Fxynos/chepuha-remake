@@ -1,6 +1,9 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.hilt)
 }
 
 android {
@@ -28,16 +31,22 @@ android {
         sourceCompatibility = JavaVersion.toVersion(libs.versions.targetJvm.get())
         targetCompatibility = JavaVersion.toVersion(libs.versions.targetJvm.get())
     }
-    kotlinOptions {
-        jvmTarget = libs.versions.targetJvm.get()
-    }
 }
 
 dependencies {
     implementation(project(":domain"))
     implementation(project(":data"))
 
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.compiler)
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
+}
+
+kotlin {
+    compilerOptions {
+        jvmTarget.set(JvmTarget.fromTarget(libs.versions.targetJvm.get()))
+    }
 }
