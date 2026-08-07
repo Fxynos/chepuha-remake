@@ -4,10 +4,11 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt)
+    alias(libs.plugins.compose.compiler)
 }
 
 android {
-    namespace = libs.versions.namespace.get()
+    namespace = "${libs.versions.namespace.get()}.presentation"
     compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {
@@ -16,6 +17,10 @@ android {
         targetSdk = libs.versions.targetSdk.get().toInt()
         versionCode = libs.versions.versionCode.get().toInt()
         versionName = libs.versions.versionName.get()
+    }
+
+    buildFeatures {
+        compose = true
     }
 
     buildTypes {
@@ -36,6 +41,9 @@ android {
 dependencies {
     implementation(project(":domain"))
     implementation(project(":data"))
+
+    implementation(libs.bundles.compose.implementation)
+    debugImplementation(libs.bundles.compose.debug.implementation)
 
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
