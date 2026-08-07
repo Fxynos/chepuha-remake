@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Predefined Story 1 -->
+
+    <string name="predefined_story_1_title">По умолчанию</string>
+
+    <string name="predefined_story_1_question_1">Кто?</string>
+    <string name="predefined_story_1_question_2">С кем?</string>
+    <string name="predefined_story_1_question_3">Когда?</string>
+    <string name="predefined_story_1_question_4">Где?</string>
+    <string name="predefined_story_1_question_5">Что делали?</string>
+    <string name="predefined_story_1_question_6">Тут пришёл</string>
+    <string name="predefined_story_1_question_7">И сказал</string>
+    <string name="predefined_story_1_question_8">Ему ответили</string>
+    <string name="predefined_story_1_question_9">Дело закончилось</string>
+
+    <string name="predefined_story_1_question_before_1"></string>
+    <string name="predefined_story_1_question_before_2">с </string>
+    <string name="predefined_story_1_question_before_3"></string>
+    <string name="predefined_story_1_question_before_4"></string>
+    <string name="predefined_story_1_question_before_5"></string>
+    <string name="predefined_story_1_question_before_6">Тут пришёл </string>
+    <string name="predefined_story_1_question_before_7">И сказал: "</string>
+    <string name="predefined_story_1_question_before_8">Ему ответили: "</string>
+    <string name="predefined_story_1_question_before_9">Дело закончилось </string>
+
+    <string name="predefined_story_1_question_after_1"> </string>
+    <string name="predefined_story_1_question_after_2"> </string>
+    <string name="predefined_story_1_question_after_3"> </string>
+    <string name="predefined_story_1_question_after_4"> </string>
+    <string name="predefined_story_1_question_after_5">. </string>
+    <string name="predefined_story_1_question_after_6"> </string>
+    <string name="predefined_story_1_question_after_7">". </string>
+    <string name="predefined_story_1_question_after_8">". </string>
+    <string name="predefined_story_1_question_after_9">.</string>
+</resources>

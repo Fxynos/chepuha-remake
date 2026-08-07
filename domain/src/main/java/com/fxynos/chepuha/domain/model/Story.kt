@@ -1,17 +1,8 @@
 package com.fxynos.chepuha.domain.model
 
-import androidx.annotation.StringRes
+import com.fxynos.chepuha.domain.value.StoryId
 
-sealed interface Story {
-    val id: Int
-
-    data class Predefined(
-        override val id: Int,
-        @StringRes val title: Int
-    ): Story
-
-    data class UserDefined(
-        override val id: Int,
-        val title: String
-    ): Story
-}
+data class Story(
+    val id: StoryId,
+    val title: String
+)

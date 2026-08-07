@@ -4,11 +4,11 @@ import com.fxynos.chepuha.domain.gateway.PlayerDataSource
 import com.fxynos.chepuha.domain.gateway.QuestionDataSource
 import com.fxynos.chepuha.domain.contract.SuspendedUseCase
 import com.fxynos.chepuha.domain.model.PlayerAnswer
-import com.fxynos.chepuha.domain.model.StoryTellingDataSource
+import com.fxynos.chepuha.domain.gateway.StoryTellingStateSource
 import javax.inject.Inject
 
 class AddAnswerUseCase @Inject constructor(
-    private val storyTelling: StoryTellingDataSource,
+    private val storyTelling: StoryTellingStateSource,
     private val questions: QuestionDataSource,
     private val players: PlayerDataSource
 ): SuspendedUseCase<PlayerAnswer, Unit> {

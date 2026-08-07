@@ -3,12 +3,12 @@ package com.fxynos.chepuha.domain.usecase
 import com.fxynos.chepuha.domain.gateway.PlayerDataSource
 import com.fxynos.chepuha.domain.gateway.QuestionDataSource
 import com.fxynos.chepuha.domain.contract.SuspendedUseCase
-import com.fxynos.chepuha.domain.model.StoryTellingDataSource
+import com.fxynos.chepuha.domain.gateway.StoryTellingStateSource
 import com.fxynos.chepuha.domain.model.StoryTellingState
 import javax.inject.Inject
 
 class GetCurrentQuestionUseCase @Inject constructor(
-    private val storyTelling: StoryTellingDataSource,
+    private val storyTelling: StoryTellingStateSource,
     private val players: PlayerDataSource,
     private val questions: QuestionDataSource
 ): SuspendedUseCase<Unit, StoryTellingState?> {
