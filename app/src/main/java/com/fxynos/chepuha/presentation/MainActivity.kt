@@ -13,10 +13,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import com.fxynos.chepuha.presentation.navigation.AppRouter
+import com.fxynos.chepuha.presentation.theme.AppTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContent {
             Box(modifier = Modifier.fillMaxSize()) {
                 Image(
@@ -25,9 +27,11 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     contentScale = ContentScale.Crop
                 )
-                Scaffold(containerColor = Color.Transparent) { insets ->
-                    Box(modifier = Modifier.padding(insets)) {
-                        AppRouter()
+                AppTheme(darkTheme = false, dynamicColor = false) {
+                    Scaffold(containerColor = Color.Transparent) { insets ->
+                        Box(modifier = Modifier.padding(insets)) {
+                            AppRouter()
+                        }
                     }
                 }
             }
