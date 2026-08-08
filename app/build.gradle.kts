@@ -2,6 +2,7 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt)
     alias(libs.plugins.compose.compiler)
@@ -42,12 +43,14 @@ dependencies {
     implementation(project(":domain"))
     implementation(project(":data"))
 
+    implementation(platform(libs.compose.bom))
     implementation(libs.bundles.compose.implementation)
     debugImplementation(libs.bundles.compose.debug.implementation)
 
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
 
+    implementation(libs.kotlinx.serialization)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
