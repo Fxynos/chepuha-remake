@@ -20,7 +20,13 @@ fun AppRouter() {
         onBack = { if (backStack.size > 1) backStack.removeLastOrNull() }
     ) { key ->
         when (key) {
-            Destination.MainMenu -> NavEntry(key) { MenuScreen() }
+            Destination.MainMenu -> NavEntry(key) {
+                MenuScreen(
+                    onPlayClicked = { TODO() },
+                    onHowToPlayClicked = { TODO() },
+                    onExitClicked = { backStack.clear() }
+                )
+            }
             Destination.Players -> TODO()
             Destination.Game -> TODO()
             Destination.Results -> TODO()

@@ -29,7 +29,7 @@ class MainActivity : ComponentActivity() {
                 )
                 AppTheme(darkTheme = false, dynamicColor = false) {
                     Scaffold(containerColor = Color.Transparent) { insets ->
-                        Box(modifier = Modifier.padding(insets)) {
+                        Box(Modifier.padding(insets)) {
                             AppRouter()
                         }
                     }
